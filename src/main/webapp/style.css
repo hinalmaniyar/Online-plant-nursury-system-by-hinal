@@ -1,0 +1,362 @@
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+/* Navbar */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Keep this color unchanged */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white; /* Keep link color white */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #00b894; /* Change on hover */
+    border-radius: 5px;
+}
+
+.website-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white; /* Keep website name color white */
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.website-name a {
+    text-decoration: none;
+    color: white; /* Keep link color white */
+    font-weight: bold;
+    font-size: inherit;
+    transition: color 0.3s ease;
+}
+
+.website-name a:hover {
+    color: #00b894; /* Change on hover */
+}
+
+/* Welcome Section */
+header {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.welcome-container {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    color: white;
+    text-align: left; /* Change text alignment to left */
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.welcome-container h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.welcome-container p {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.welcome-container .cta-button {
+    background-color: #00b894;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.welcome-container .cta-button:hover {
+    background-color: #019a73;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Divider Section */
+.section-divider {
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(248, 249, 250, 1));
+    width: 100%;
+}
+
+/* Plant Care Section */
+.plant-care-section {
+
+    padding: 50px 20px; /* Fixed spacing issue */
+    background-color: #f8f9fa; /* Light Gray Background */
+    text-align: center;
+    border-top: 1px solid #ddd; /* Divider Line at the Top */
+}
+
+.plant-care-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.plant-care-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.plant-care-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.plant-care-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plant-care-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.plant-care-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.plant-care-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.plant-care-item p {
+    font-size: 1rem;
+    color: #666;
+    padding: 15px; /* Fixed spacing issue */
+}
+
+/* Product Section */
+.product-section {
+    padding: 0px 20px;
+    background-color: #f8f9fa;
+}
+
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    gap:20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Hover Effect */
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #00b894;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-stock {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-button {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #019a73;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-cards-container {
+        grid-template-columns: 1fr; /* Single Column on Small Screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #00000080; /* Semi-transparent black */
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Fixed spacing issue */
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    padding: 50px 20px;
+    background: #00b894;
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section .cta-button {
+    background-color: #019a73;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #00b894;
+}
+
+/* Footer Links */
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00b894;
+}
